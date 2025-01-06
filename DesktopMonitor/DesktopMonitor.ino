@@ -70,8 +70,14 @@ void getData() {
   client.println("Host: " + String(host));
   client.println("Connection: close\r\n");
 
-  while (!client.available())
-    ;
+  unsigned long timeout = millis();
+  while (!client.available()) {
+    if (millis() - timeout > 5000) {
+      Serial.println("Response timeout !");
+      client.stop();
+      return;
+    }
+  }
 
   char endOfHeaders[] = "\r\n\r\n";
   if (!client.find(endOfHeaders)) {
