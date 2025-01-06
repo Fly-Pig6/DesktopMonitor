@@ -4,10 +4,10 @@
 #include <ArduinoJson.h>
 #include <HTTPClient.h>
 
-const char* ssid = "DXDXD";
-const char* password = "p@ssword_X";
-const char* host = "192.168.158.128";
-const int httpPort = 8085;
+const char* ssid = "<WiFi名字>";
+const char* password = "<WiFi密码>";
+const char* host = "<你的电脑IP地址>";
+const int httpPort = 8085;  // Open Hardware Monitor提供的端口号
 
 #define UPDATE_INTERVAL_S 2
 TFT_eSPI tft = TFT_eSPI();
