@@ -6,10 +6,10 @@
 #include <WiFi.h>
 #include <ArduinoJson.h>
 
-const char* ssid = "DXDXD";
-const char* password = "p@ssword_X";
-const char* host = "192.168.213.128";
-const int httpPort = 8085;
+const char* ssid = "<WiFi名称>";
+const char* password = "<WiFi密码>";
+const char* host = "<电脑IP地址>";  // 192.169.XXX.XXX
+const int httpPort = 8085;         // 8085是Open Hardware Monitor提供的端口号
 
 #define UPDATE_INTERVAL_S 2
 TFT_eSPI tft = TFT_eSPI();
